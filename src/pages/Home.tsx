@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col justify-center">
-      <h1 className="text-4xl sm:text-5xl text-orange-600 font-extrabold">
+      <h1 className="text-4xl sm:text-5xl text-orange-600 font-extrabold mt-8">
         Geographic Communities
       </h1>
       <p className="mt-4 text-slate-900">
