@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OpenHouse.AI - Front End Web Development Coding Exercise
 
-## Getting Started
+Submission by Isabel Vieira / [@belvieir4](https://github.com/belvieir4)
 
-First, run the development server:
+**Stack used** - Next.js / Typescript / Tailwind / React Query / Axios
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Available scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Execute this script to install the dependencies
 
-## Learn More
+#### npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+Execute this script to run the application locally on development mode
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### npm build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Execute this script to build the project and prepare it to run it on production mode
 
-## Deploy on Vercel
+#### npm start
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Execute this script to run the application on production mode (build required)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+### Overview
+
+I've started the project using React insted of Next.js, but when I got to the part of consuming the API, **I started receiving a CORS error**, so I've searched the internet for a workaround, as I didn't know if I would have a quick response from OpenHouse.ai about a fix.
+
+The workaround made me move my project to **Next.js where I could use API Routes** to get the information needed from the API. Even though I've never used Next.js before, I was able to make it work.
+
+For the UI, I've decided to use **Tailwind CSS** to help, as it's a robust framework that uses tokens that guarantee the design consistency and responsiveness.
+
+And **Axios and React Query** where the libraries that I chose to help with the API consumption.
+
+### Follow up questions
+
+**Q: How would you improve the quality of your application?**
+A: If possible there are some things I'd do:
+
+- Add tests to guarantee the quality and helps prevent software regression
+- Map and improve errors that I couldn't foresee
+- Create a lazy loading visualization to support a larger number of results without compromizing performance
+
+**Q: Would you implement anything differently?**
+A: Yes. If there wasn't the CORS error, I'd stick with the React project that I have more knowledge of, and, while reading about Next.js, I realized that the library might be too much for a simple project like this.
+
+### Next steps and conclusion
+
+Thinking on next steps for this project, I'd create a listing with all the houses available on each community, and a details page in each one of them, so the user can see all the information they need about the house.
+
+It was a challanging test, specially because I had to find alternatives to deliver it in time and deal with a unexpect problem.

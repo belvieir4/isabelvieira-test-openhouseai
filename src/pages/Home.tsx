@@ -33,23 +33,34 @@ export default function Home() {
     }) || [];
 
   return (
-    <div className="flex min-h-screen flex-col justify-center">
+    <div className="flex flex-col align-center flex-1">
       <h1 className="text-4xl sm:text-5xl text-orange-600 font-extrabold mt-8">
         Geographic Communities
       </h1>
       <p className="mt-4 text-slate-900">
-        Front-end Development coding exercise from Isabel Vieira
+        Front-end Development coding exercise by Isabel Vieira
       </p>
-      <div className="mt-10 grid w-full grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-6">
-        {cards.map((card) => (
-          <Card
-            imgUrl={card.imgUrl}
-            name={card.name}
-            group={card.group}
-            avgPrice={card.averagePrice}
-          />
-        ))}
-      </div>
+      {commQuery.error || houseQuery.error ? (
+        <div className="mt-10 flex flex-col align-center justify-center flex-1">
+          <p className="text-center text-2xl sm:text-3xl text-teal-600 font-bold">
+            Something went wrong! :(
+          </p>
+          <p className="mt-4 text-center">
+            We couldn't load any data. Refresh your page or try again later.
+          </p>
+        </div>
+      ) : (
+        <div className="mt-10 grid w-full grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] gap-6">
+          {cards.map((card) => (
+            <Card
+              imgUrl={card.imgUrl}
+              name={card.name}
+              group={card.group}
+              avgPrice={card.averagePrice}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply py-10 px-8 bg-slate-100;
+  @apply py-6 px-4 sm:py-10 sm:px-8 bg-slate-100 min-h-screen flex flex-col;
 }

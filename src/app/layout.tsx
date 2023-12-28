@@ -5,8 +5,8 @@ import "./globals.css";
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OpenHouse.ai Coding Exercise",
-  description: "Front-end Development coding exercise from Isabel Vieira",
+  title: "Geographic Communities",
+  description: "Front-end Development coding exercise by Isabel Vieira",
 };
 export default function RootLayout({
   children,
