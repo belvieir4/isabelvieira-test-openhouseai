@@ -4,7 +4,7 @@ export type CardProps = {
   imgUrl: string;
   name: string;
   group: string;
-  avgPrice: number;
+  avgPrice: number | null;
 };
 
 const Card = ({ imgUrl, name, group, avgPrice }: CardProps) => {
@@ -17,7 +17,15 @@ const Card = ({ imgUrl, name, group, avgPrice }: CardProps) => {
           Region: <strong>{group}</strong>
         </p>
         <p className="text-slate-900 mt-1">
-          Average Price: <strong>${avgPrice}</strong>
+          Average Price:{" "}
+          <strong>
+            {avgPrice !== null
+              ? Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                }).format(avgPrice)
+              : "N/A"}
+          </strong>
         </p>
         <Button text="View Houses" />
       </div>

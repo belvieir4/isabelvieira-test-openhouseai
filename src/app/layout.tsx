@@ -6,7 +6,7 @@ const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "OpenHouse.ai Coding Exercise",
-  description: "",
+  description: "Front-end Development coding exercise from Isabel Vieira",
 };
 export default function RootLayout({
   children,
@@ -16,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="author" content="Isabel Vieira" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
